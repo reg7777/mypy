@@ -45,6 +45,8 @@ def getinput(sprompt):
 def header():
     print("*****************************************************")
     print("python version " +sys.version)
+    print("\nSpecial program to calculate points on a turning tool \
+            with relationship to the point")
     print("*****************************************************")
     return
 
