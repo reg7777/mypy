@@ -1,0 +1,123 @@
+#!/usr/bin/python
+
+# Modified 2016-03-17 ***********************************
+#*********************************************************
+#*********************************************************
+
+# import modules used here -- sys is a very standard one
+import sys
+import math
+import os
+
+#   Define functions
+
+#Begin definitions **************************************
+#*********************************************************
+#*********************************************************
+# degrees = radians*180/pi
+# radians = degrees*pi/180
+# python trig uses radians
+
+# sine x = opposite/hypotenuse
+# cosine x = adjacent/hypotenuse
+# tangent = opposite/adjacent
+
+PI = 3.14159265
+ER = 0  #**********Turn on (1) for use in error tests
+
+
+# Get input function ********************************
+#*********************************************************
+#*********************************************************
+
+def getinput(sprompt):
+    try:
+        try:
+           result = raw_input(sprompt)
+        except:
+           result = input(sprompt)
+    except:
+        print("Error in getinput function")
+    return result
+
+#*********************************************************
+# Header function    
+def header():
+    print("*****************************************************")
+    print("python version " +sys.version)
+    print("*****************************************************")
+    return
+
+#*********************************************************
+# Print function
+def fprintout(lpdata):
+  print
+  print( lpdata)
+  print
+
+#*********************************************************
+# Print to file function
+def ffile(sout):
+  f= open("out.txt", "a")
+  f.write(sout)
+  f.close()
+
+
+# Exit function ****************************************
+def exit():
+    
+    result = getinput("\n Press any key to finish\n")
+    print(result)
+# getdata1 function *************************************
+def getdata1():
+   #Get Ax,Ay,ang 
+   ax = getinput("\nInput Ax ")
+   ay = getinput("\nInput Ay ")
+   at = getinput("\nInput B angle offset from 90 ")
+
+   ang = getinput("\nInput the angle with respect to the y axis ")
+   ang = ang + at
+   return (ax, ay, ang ) 
+
+# getdata2()
+def getdata2():
+   #Get Ax,Ay,Bx,By
+   ax = getinput("\nInput Ax ")
+   ay = getinput("\nInput Ay ")
+   bx = getinput("\nInput Bx ")
+   by = getinput("\nInput By ")
+
+   return (ax,ay,bx,by)
+
+#********************************************************************************
+#********************************************************************************
+#*********************************************************
+#*********************************************************
+
+# Gather our code in a main() function
+def main():
+    os.system('clear')
+    header()
+    x = getinput("Calculate B,C,D given A( x,y),ang (y or n)\n\
+    n means calculate C,D,ang given A(x,y), B(x,y) ")
+    if x == 'y':
+        ax, ay, ang1 = getdata1()
+        print("\n " +str(ax) + " " + str(ay) + " " + str(ang1))
+    else:
+        ax, ay, bx, by  =getdata2()
+        print("\n   " + str(ax) + "  " + str(ay) + str(bx) + " " + str(by))
+
+    exit()
+
+
+
+#Run main ***********************************************
+#*********************************************************
+#*********************************************************
+#********************************************************
+#********************************************************
+if __name__ == '__main__':
+    main()
+#********************************************************
+#********************************************************
+
