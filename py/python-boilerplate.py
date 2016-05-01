@@ -22,7 +22,7 @@ import math
 # cosine x = adjacent/hypotenuse
 # tangent = opposite/adjacent
 
-PI = 3.14159265
+PI = math.pi
 ER = 0  #**********Turn on (1) for use in error tests
 
 
@@ -68,6 +68,7 @@ def exit():
     
     result = getinput("\n Press any key to finish\n")
     print(result)
+    print("PI = " +str(PI))
 
 #********************************************************************************
 #********************************************************************************
