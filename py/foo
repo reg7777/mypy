@@ -105,7 +105,7 @@ def main():
         print("\n " +str(ax) + " " + str(ay) + " " + str(ang1))
     else:
         ax, ay, bx, by  =getdata2()
-        print("\n   " + str(ax) + "  " + str(ay) + str(bx) + " " + str(by))
+        print("\n   " + str(ax) + "  " + str(ay) + " " + str(bx) + " " + str(by))
 
     exit()
 
