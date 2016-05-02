@@ -85,9 +85,12 @@ def main():
     x = ''
     fa = float(0)
     it = 1
+    sdata = ""
 
     while( x != 'q'):
        ix = getinput("Input number   " + str(it) + ": ")
+       sdata = sdata + " " + str(ix)
+
        x = ix
        
        if x == 'q':
@@ -109,6 +112,8 @@ def main():
     sit = str(it)
     os.system('clear')
     header()
+    
+    print("\nData = " + sdata)
     print("\nCount = " + sit +  "\nSum of the numbers = " + sa + "\nAverage = " + savg)
     print("\n")
 #   exit()
