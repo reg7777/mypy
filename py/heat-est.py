@@ -1,13 +1,13 @@
 #!/usr/bin/python
 
-# Modified 2016-03-17 ***********************************
+# Modified 2016-05-1 ************************************
 #*********************************************************
 #*********************************************************
 
 # import modules used here -- sys is a very standard one
 import sys
 import math
-
+import os
 
 #   Define functions
 
@@ -22,7 +22,7 @@ import math
 # cosine x = adjacent/hypotenuse
 # tangent = opposite/adjacent
 
-PI = 3.14159265
+PI = math.pi
 ER = 0  #**********Turn on (1) for use in error tests
 
 
@@ -45,6 +45,8 @@ def getinput(sprompt):
 def header():
     print("*****************************************************")
     print("python version " +sys.version)
+    print("Input total glass width and height, outside wall length")
+    print("and height, and total length, width, and height. ")
     print("*****************************************************")
     return
 
@@ -101,7 +103,7 @@ def runit(g, w, v):
       print("  at 0.239 watts per BTU")
       print("\nFeet of electric heat = ", sfeh )
       print("  at 300 watts per foot.")
-      print("\nDone")
+      print("\n")
 
 
 #********************************************************************************
@@ -111,6 +113,7 @@ def runit(g, w, v):
 
 # Gather our code in a main() function
 def main():
+    os.system('clear')
     header()
     g1 = getinput("Input the total glass width ")
     g2 = getinput("Input the glass height ")
@@ -134,7 +137,7 @@ def main():
 
     runit(g, w, v)
 
-    exit()
+#    exit()
 
 
 
