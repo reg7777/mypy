@@ -48,6 +48,7 @@ def header():
     print("*****************************************************")
     print("python version " +sys.version)
     print("Average of a string of input numbers")
+    print("  Press 'q' to quit")
     print("*****************************************************")
     return
 
@@ -79,6 +80,8 @@ def exit():
 
 # Gather our code in a main() function
 def main():
+    os.system('clear')
+    header()
     x = ''
     fa = float(0)
     it = 1
