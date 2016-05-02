@@ -1,7 +1,10 @@
 #!/usr/bin/python
 
-#Calculates the ball ft/sec given ball speed and distance
-# 2016-04-24 Last edited on desktop.
+#*******************************************************
+#2016-05-01 nodified header
+#Calculate the ball speed parameters from mph and distance
+#*******************************************************
+#*******************************************************
 
 #imports ***********************************************
 import sys
@@ -14,7 +17,7 @@ import math
 # radians = degrees*pi/180
 # python trig uses radians
 
-PI = 3.14159265
+PI = math.pi
 ER = 0  #**********Turn on (1) for use in error tests
 FM = 88/60   #88ft/sec = 60 mph
 # Get input function ********************************
@@ -65,6 +68,7 @@ def metriccal(fpers):
 
 # Main function  ************************************
 def main():
+    os.system('clear')
     header()
     x = getinput("What is ball speed in mph?  ")
     x1 = getinput("What is distance in feet? (Default home to pitcher 60.5 ft)?  ")
@@ -83,8 +87,9 @@ def main():
     secpermeter = format(secpermeter, '0.4f')
     print("\n" +x +"mph is = " +str(meterpersec) + " meters/sec")
     print("Time for 1 meter is = " +str(secpermeter) +"ms")    
-    
-    exit()
+    print("\n")
+
+#   exit()
 
 # Exit function ****************************************
 def exit():
